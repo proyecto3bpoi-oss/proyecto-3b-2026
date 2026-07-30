@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #1f2639 0%, #3b486a 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.header-sistema {
+    background-color: #00bcff;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.logo-header-tid { height: 50px; width: auto; }
+.logo-header-upgop { height: 60px; width: auto; }
+
+.header-titulo {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.header-usuario {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.usuario-rol {
+    font-size: 16px;
+}
+
+.btn-salir {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 8px 24px;
+    font-size: 15px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.btn-salir:hover {
+    transform: scale(1.05);
+}
+
+.contenedor-principal {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.layout-estadisticas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cabecera-estadisticas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tarjeta-evento-titulo {
+    background-color: #1a2746;
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+.tabla-votos-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 650px;
+    width: 100%;
+}
+
+.fila-votos {
+    display: flex;
+    gap: 20px;
+}
+
+.bloque-proyecto-voto {
+    background-color: #1a2746;
+    padding: 18px;
+    border-radius: 12px;
+    flex: 2;
+    font-size: 16px;
+}
+
+.bloque-cantidad-voto {
+    background-color: #1a2746;
+    padding: 18px;
+    border-radius: 12px;
+    flex: 1;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn-oscuro {
+    background-color: #0f141f;
+    color: #ffffff;
+    padding: 12px 35px;
+    font-size: 15px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-volver {
+    background-color: #ffd200;
+    color: #000000;
+    padding: 14px 40px;
+    font-size: 15px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contenedor-volver-derecha {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-sistema {
+    background-color: #0f141f;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+@media (max-width: 768px) {
+    .cabecera-estadisticas {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .fila-votos {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .contenedor-volver-derecha {
+        justify-content: center;
+    }
+}

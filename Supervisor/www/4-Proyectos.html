@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Proyecto</title>
+
+    <link rel="stylesheet" href="../style/4-Proyecto.css">
+</head>
+
+<body>
+
+<!--================ HEADER ================-->
+
+<header>
+
+    <div class="logos">
+
+        <img src="/zimg/TID-logo.png" alt="Logo 1">
+
+        <div class="linea"></div>
+
+        <img src="/zimg/UPGOP-logo.png" alt="Logo 2">
+
+        <div class="linea"></div>
+
+        <h2>Sistema de evaluación académico.</h2>
+
+    </div>
+
+    <button class="btnSalir" id="btnSalir">
+
+        Salir
+
+    </button>
+
+</header>
+
+
+
+<!--================ MAIN ================-->
+
+<main>
+
+    <!--========== Panel izquierdo ==========-->
+
+    <section class="panelIzquierdo">
+
+        <div
+            class="nombreProyecto"
+            id="nombreProyecto"
+        >
+
+            Nombre del Proyecto
+
+        </div>
+
+
+        <div class="contenedorAlumnos">
+
+            <div
+                class="listaAlumnos"
+                id="listaAlumnos"
+            >
+
+                <!--
+                    Los alumnos se crearán
+                    dinámicamente desde JavaScript.
+                -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--========== Panel derecho ==========-->
+
+    <aside class="panelDerecho">
+
+        <div class="promedio">
+
+            <h3>Promedio</h3>
+
+            <p id="promedioProyecto">
+                0
+            </p>
+
+        </div>
+
+        <button
+            class="btnVolver"
+            id="btnVolver"
+        >
+
+            Volver
+
+        </button>
+
+    </aside>
+
+</main>
+
+
+
+<!--================ FOOTER ================-->
+
+<footer>
+
+    <h3>2026 UPGOP</h3>
+
+    <div class="footerDerecha">
+
+        <h3>©Omega.2026</h3>
+
+        <img
+            src="/zimg/OmegaLogo-completo.jpg"
+            alt="Logo 3"
+        >
+
+    </div>
+
+</footer>
+    <script type="module" src="../js/4-Proyectos.js"></script>
+</body>
+
+</html>

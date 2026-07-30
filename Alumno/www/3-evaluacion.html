@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Evaluación Académica</title>
+
+    <link rel="stylesheet" href="../style/3-evaluacion.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="Encabezado">
+
+        <div class="Encabezado-Titulos">
+
+            <img 
+                src="/zimg/TID-logo.png" 
+                alt="Logo-Proyecto" 
+                class="Logo-Proyecto"
+            >
+
+            <div class="dividor"></div>
+
+            <img 
+                src="/zimg/UPGOP-logo.png" 
+                alt="Logo-UPGOP" 
+                class="Logo-UPGOP"
+            >
+
+            <div class="dividor"></div>
+
+            <span class="Titulo-Proyecto">
+                Sistema de evaluación académico.
+            </span>
+
+        </div>
+
+        <button type="button" class="btn-logout">
+            Salir
+        </button>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="Menu-Proyecto">
+
+        <section class="Contenedor-Evaluacion">
+
+            <!-- TÍTULO -->
+            <div class="Titulo-Evaluacion">
+                <h1>Evaluación del Maestro</h1>
+
+                <p>
+                    Califica cada pregunta utilizando una escala del 1 al 5.
+                </p>
+            </div>
+
+
+            <!-- INDICADOR DE CALIFICACIÓN -->
+            <div class="Indicador-Calificacion">
+                <span>1 = Muy malo &nbsp;&nbsp; | &nbsp;&nbsp; 5 = Excelente</span>
+            </div>
+
+
+            <!-- FORMULARIO -->
+            <form class="Evaluacion-Circulos" id="formEvaluacion">
+
+
+                <!-- PREGUNTA 1 -->
+                <div class="form-row">
+
+                    <label class="Texto-Pregunta">
+                        1. ¿El maestro explicó claramente los temas?
+                    </label>
+
+                    <div class="radio-container">
+
+                        <label class="radio-label">
+                            <input type="radio" name="p1" value="1">
+                            <span>1</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p1" value="2">
+                            <span>2</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p1" value="3">
+                            <span>3</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p1" value="4">
+                            <span>4</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p1" value="5">
+                            <span>5</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PREGUNTA 2 -->
+                <div class="form-row">
+
+                    <label class="Texto-Pregunta">
+                        2. ¿El maestro resolvió adecuadamente las dudas?
+                    </label>
+
+                    <div class="radio-container">
+
+                        <label class="radio-label">
+                            <input type="radio" name="p2" value="1">
+                            <span>1</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p2" value="2">
+                            <span>2</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p2" value="3">
+                            <span>3</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p2" value="4">
+                            <span>4</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p2" value="5">
+                            <span>5</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PREGUNTA 3 -->
+                <div class="form-row">
+
+                    <label class="Texto-Pregunta">
+                        3. ¿El maestro mostró dominio de los temas?
+                    </label>
+
+                    <div class="radio-container">
+
+                        <label class="radio-label">
+                            <input type="radio" name="p3" value="1">
+                            <span>1</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p3" value="2">
+                            <span>2</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p3" value="3">
+                            <span>3</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p3" value="4">
+                            <span>4</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p3" value="5">
+                            <span>5</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PREGUNTA 4 -->
+                <div class="form-row">
+
+                    <label class="Texto-Pregunta">
+                        4. ¿El maestro brindó apoyo durante el desarrollo del proyecto?
+                    </label>
+
+                    <div class="radio-container">
+
+                        <label class="radio-label">
+                            <input type="radio" name="p4" value="1">
+                            <span>1</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p4" value="2">
+                            <span>2</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p4" value="3">
+                            <span>3</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p4" value="4">
+                            <span>4</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p4" value="5">
+                            <span>5</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PREGUNTA 5 -->
+                <div class="form-row">
+
+                    <label class="Texto-Pregunta">
+                        5. ¿El maestro mantuvo una buena comunicación con los alumnos?
+                    </label>
+
+                    <div class="radio-container">
+
+                        <label class="radio-label">
+                            <input type="radio" name="p5" value="1">
+                            <span>1</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p5" value="2">
+                            <span>2</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p5" value="3">
+                            <span>3</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p5" value="4">
+                            <span>4</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="p5" value="5">
+                            <span>5</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMENTARIO Y BOTONES -->
+                <div class="bottom-section">
+
+                    <textarea 
+                        class="textarea-comment"
+                        id="comentario"
+                        placeholder="Escribe un comentario aquí..."
+                    ></textarea>
+
+
+                    <div class="Botones-Evaluacion">
+
+
+                        <a 
+                            href="./1-alumnos.html" 
+                            id="btnVolver"
+                            class="btn-volver"
+                        >
+                            Volver
+                        </a>
+
+                        <button 
+                            type="button" 
+                            class="btn-enviar"
+                            id="btnEnviarEvaluacion"
+                        >
+                            Enviar evaluación
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="Footer">
+
+        <p class="Footer-Copyright">
+            © 2026 OmegaDevelopment. Todos los derechos reservados.
+        </p>
+
+        <img 
+            src="/zimg/OmegaLogo-completo.jpg" 
+            alt="Logo-Empresa" 
+            class="Logo-Empresa"
+        >
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script type="module" src="../js/3-evaluacion.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+/* RESETEO BÁSICO */
+* {
+    margin: 0;                             /* Elimina el espacio externo predeterminado de todos los elementos */
+    padding: 0;                            /* Elimina el espacio interno predeterminado de todos los elementos */
+    box-sizing: border-box;                /* Incluye el padding y el borde en el tamaño total para que no se deformen las cajas */
+    font-family: Arial, sans-serif;        /* Define la tipografía principal (Arial) y una de respaldo (sans-serif) */
+}
+
+body {
+    background: linear-gradient(180deg, #00C2FF 20%, #004e92 100%); /* Crea un fondo degradado vertical de azul claro a azul oscuro */
+    min-height: 100vh;                     /* Hace que el cuerpo ocupe como mínimo el 100% de la altura de la pantalla */
+    display: flex;                         /* Activa el modelo Flexbox para organizar sus elementos hijos */
+    flex-direction: column;                /* Organiza los elementos hijos (como el encabezado y el menú) en una columna vertical */
+}
+
+/* BARRA DE NAVEGACIÓN */
+.Encabezado {
+    background-color: #04527A;             /* Define el color de fondo azul oscuro de la barra */
+    color: white;                          /* Cambia el color del texto a blanco */
+    display: flex;                         /* Activa Flexbox para alinear los elementos de la barra en fila */
+    justify-content: space-between;        /* Separa los bloques internos enviándolos a los extremos (izquierdo y derecho) */
+    align-items: center;                   /* Centra verticalmente todos los elementos dentro de la barra */
+    padding: 20px 40px;                    /* Añade un espacio interno de 40px arriba/abajo y a los lados */
+}
+
+.Encabezado-Titulos {
+    display: flex;                         /* Activa Flexbox para colocar los títulos en una línea horizontal */
+    align-items: center;                   /* Centra verticalmente los elementos internos */
+    gap: 20px;                             /* Crea una separación automática de 20px entre los elementos hijos */
+}
+
+.Logo-Proyecto {
+    width: 150px;                          /* Define un ancho fijo de 150 píxeles para el logo del proyecto */
+    height: auto;                          /* Mantiene la proporción original de la imagen */
+}
+
+.Logo-UPGOP {
+    width: 150px;                          /* Define un ancho fijo de 150 píxeles para el logo de la universidad */
+    height: auto;                          /* Mantiene la proporción original de la imagen */
+}
+
+.dividor {
+    width: 2px;                            /* Define el grosor fino de la línea vertical */
+    height: 30px;                          /* Define la altura de la línea divisoria */
+    background-color: rgba(255, 255, 255, 0.5); /* Aplica color blanco con un 50% de transparencia */
+}
+
+.Titulo-Proyecto {
+    font-size: 40px;                       /* Establece un tamaño de letra grande de 40 píxeles */
+}
+
+.Seccion {
+    font-size: 24px;                       /* Establece el tamaño de la letra en 24 píxeles */
+    font-weight: bold;                     /* Aplica un estilo de texto en negrita */
+}
+
+.btn-logout {
+    background-color: #FF0000;             /* Define el color de fondo en rojo brillante */
+    color: #FFFFFF;                        /* Define el color del texto en blanco puro */
+    border: none;                          /* Quita el borde gris que los botones traen por defecto */
+    padding: 8px 20px;                     /* Añade espacio interno: 8px arriba/abajo y 20px a los lados */
+    border-radius: 20px;                   /* Redondea las esquinas del botón para darle forma ovalada */
+    cursor: pointer;                       /* Cambia el cursor a una "manita" al pasar sobre el botón */
+    font-size: 14px;                       /* Establece el tamaño de la letra en 14 píxeles */
+}
+
+.btn-logout:hover {
+    background-color: #d93636;             /* Cambia el color de fondo a un rojo más claro al pasar el cursor sobre el botón */
+}
+
+/* CONTENEDOR PRINCIPAL: Alinea los bloques en fila */
+.Menu-Proyecto {
+    display: flex;                         /* Activa Flexbox para colocar el QR y los controles lado a lado */
+    justify-content: space-between;        /* Empuja el QR a la izquierda y los controles a la derecha */
+    padding: 40px;                         /* Añade un espacio interno de 40px alrededor de todo el contenedor */
+    gap: 40px;                             /* Deja una separación de 40px de espacio libre entre el QR y la columna derecha */
+    flex: 1;                               /* Hace que este contenedor crezca y ocupe todo el espacio vertical restante de la pantalla */
+}
+
+/* CUADRO DEL QR (Lado Izquierdo) */
+.QR {
+    background-color: #1c2d5a;             /* Define el color de fondo azul marino oscuro */
+    color: white;                          /* Cambia el color del texto interno a blanco */
+    width: 550px;                          /* Establece un ancho fijo de 550 píxeles */
+    min-width: 550px;                      /* Evita que el cuadro se encoja a menos de 550px en pantallas pequeñas */
+    height: 550px;                         /* Establece una altura fija de 550 píxeles (haciéndolo un cuadrado perfecto) */
+    border-radius: 20px;                   /* Redondea las esquinas del cuadro a 20px */
+    display: flex;                         /* Activa Flexbox dentro del cuadro para controlar su contenido */
+    justify-content: center;               /* Centra el contenido (el texto o imagen del QR) horizontalmente */
+    align-items: center;                   /* Centra el contenido (el texto o imagen del QR) verticalmente */
+    font-size: 24px;                       /* Establece el tamaño de la letra en 24 píxeles */
+    flex-wrap: wrap;                       /* Permite que el contenido interno pase a una nueva línea si es necesario */
+}
+
+/* SECCIÓN DE CONTROLES (Lado Derecho) */
+.Descargar {
+    display: flex;                         /* Activa Flexbox para organizar los botones en esta sección */
+    flex-direction: column;                /* Coloca los botones uno debajo del otro en forma de columna */
+    justify-content: center;               /* Distribuye o centra el contenido verticalmente en el espacio disponible */
+    align-items: flex-end;                 /* Alinea y empuja todos los botones hacia el borde derecho de su sección */
+    flex: 1;                               /* Permite que esta columna se estire para ocupar todo el espacio restante del menú */
+    position: relative;                    /* Activa el modo de posicionamiento referencial para que botones internos usen 'absolute' */
+}
+
+.Volver {
+    display: flex;                         /* Activa Flexbox para organizar los botones en esta sección */
+    flex-direction: column;                /* Coloca los botones uno debajo del otro en forma de columna */
+    justify-content: center;               /* Distribuye o centra el contenido verticalmente en el espacio disponible */
+    align-items: flex-end;                 /* Alinea y empuja todos los botones hacia el borde derecho de su sección */
+    flex: 1;                               /* Permite que esta columna se estire para ocupar todo el espacio restante del menú */
+    position: relative;                    /* Activa el modo de posicionamiento referencial para que botones internos usen 'absolute' */
+}
+
+/* BOTÓN DESCARGAR */
+.btn-descarga {
+    background-color: #1c2d5a;             /* Define el color de fondo azul marino oscuro */
+    color: white;                          /* Cambia el color del texto a blanco */
+    border: none;                          /* Quita el borde predeterminado del botón */
+    border-radius: 15px;                   /* Redondea las esquinas a 15px */
+    width: 80px;                           /* Establece un ancho de 80 píxeles */
+    height: 40px;                          /* Establece una altura de 40 píxeles */
+    font-size: 10px;                       /* Define una letra pequeña de 10 píxeles */
+    cursor: pointer;                       /* Cambia el cursor a "manita" para indicar que se puede clickear */
+    text-align: center;                    /* Centra el texto horizontalmente dentro del botón */
+    margin-right: auto;                    /* Empuja el botón hacia la izquierda de forma automática anulando el 'flex-end' del padre */
+    margin-left: 60px;                     /* Añade un espacio de separación de 60px desde su borde izquierdo */
+}
+
+/* BOTÓN VOLVER (Convertido desde una etiqueta <a>) */
+.btn-volver {
+    background-color: #FFDD00;             /* Define el color de fondo amarillo brillante */
+    color: #000000;                        /* Define el color del texto en negro */
+    text-decoration: none;                 /* Quita la línea de subrayado que los enlaces <a> llevan por defecto */
+    border-radius: 15px;                   /* Redondea las esquinas del botón a 15px */
+    width: 150px;                          /* Establece un ancho de 150 píxeles */
+    height: 30px;                          /* Establece una altura de 30 píxeles */
+    font-size: 18px;                       /* Define el tamaño de la letra en 18 píxeles */
+    display: flex;                         /* Activa Flexbox dentro del enlace para alinear su propio texto */
+    justify-content: center;               /* Centra el texto horizontalmente dentro del botón amarillo */
+    align-items: center;                   /* Centra el texto verticalmente dentro del botón amarillo */
+    cursor: pointer;                       /* Cambia el cursor a "manita" */
+    /* Lo posicionamos abajo a la derecha */
+    position: absolute;                    /* Despega el botón del flujo normal para moverlo libremente usando coordenadas */
+    bottom: 120px;                             /* Lo clava exactamente en el fondo (borde inferior) de su contenedor padre */
+    right: 0;                              /* Lo clava exactamente en el extremo derecho de su contenedor padre */
+}
+
+/* EFECTOS HOVER (Para cuando pases el mouse por encima) */
+.btn-descarga:hover {
+    background-color: #273b75;             /* Cambia el fondo a un azul más claro al pasar el cursor */
+}
+
+.btn-volver:hover {
+    background-color: #ffe74b;             /* Cambia el fondo a un amarillo más claro al pasar el cursor */
+}
+
+.Footer {
+    background-color: #0D1B2A;             /* Color de fondo azul oscuro */
+    color: white;                          /* Color de texto blanco */
+    display: flex;                         /* Activa Flexbox para organizar el contenido del pie de página */
+    align-items: center;                   /* Centra verticalmente los elementos internos */
+    text-align: center;                    /* Centra el texto horizontalmente */
+    justify-content: space-between;        /* Distribuye los elementos empujándolos a los extremos (izq y der) */
+    padding: 20px;                         /* Añade un relleno de 20px alrededor del contenido */
+    font-size: 28px;                       /* Tamaño de letra pequeño de 28 píxeles */
+    width: 100%;                           /* Asegura que el pie de página ocupe todo el ancho de la ventana */
+    box-sizing: border-box;
+}
+
+.Logo-Empresa {
+    width: 150px;                          /* Define un ancho fijo de 100 píxeles para el logo de la empresa */
+    height: auto;                          /* Mantiene la proporción original de la imagen */
+    border-radius: 25px;                   /* Redondea ligeramente las esquinas del logo de la empresa */
+}

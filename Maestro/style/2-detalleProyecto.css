@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #1f2639 0%, #3b486a 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.header-sistema {
+    background-color: #00bcff;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.header-logos {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-header-tid { height: 50px; width: auto; object-fit: contain; }
+.logo-header-upgop { height: 60px; width: auto; object-fit: contain; }
+
+.header-titulo {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.header-usuario {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.usuario-rol {
+    font-size: 16px;
+}
+
+/* AQUÍ ESTÁ EL ESTILO QUE FALTABA */
+.btn-salir {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 8px 24px;
+    font-size: 15px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.btn-salir:hover {
+    transform: scale(1.05);
+}
+
+.contenedor-principal {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.layout-detalle {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+}
+
+.detalle-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.tarjeta-proyecto {
+    background-color: #1a2746;
+    padding: 22px 15px;
+    border-radius: 14px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.ancho-fijo {
+    width: 220px;
+}
+
+.bloques-paralelos {
+    display: flex;
+    gap: 25px;
+    min-height: 220px;
+}
+
+.bloque-info {
+    background-color: #1a2746;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bloques-paralelos .bloque-info:first-child { flex: 2; }
+.bloques-paralelos .bloque-info:last-child { flex: 1; }
+
+.btn-volver {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #ffd200;
+    color: #000000;
+    padding: 14px 40px;
+    font-size: 15px;
+    border-radius: 12px;
+    align-self: flex-start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-volver:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.panel-alumnos-section5 {
+    background-color: #c6e3f7;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.lista-alumnos-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pill-alumno {
+    background-color: #1a2746;
+    color: #ffffff;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.footer-sistema {
+    background-color: #0f141f;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.footer-creditos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.badge-omega-logo {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+@media (max-width: 768px) {
+    .header-sistema {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 10px;
+        text-align: center;
+    }
+    .layout-detalle {
+        grid-template-columns: 1fr;
+    }
+    .bloques-paralelos {
+        flex-direction: column;
+    }
+    .ancho-fijo {
+        width: 100%;
+    }
+}

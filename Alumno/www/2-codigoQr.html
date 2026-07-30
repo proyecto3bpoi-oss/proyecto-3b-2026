@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código QR</title>
+    <!-- Icono de la pestaña -->
+    <link rel="shortcut icon" href="/zimg/OmegaLogo-reducido.png" type="image/x-icon">
+    <!-- Enlazamos el nuevo archivo CSS -->
+    <link rel="stylesheet" href="../style/2-codigoQr.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+    <header class="Encabezado">
+        <div class="Encabezado-Titulos">
+            <img src="/zimg/TID-logo.png" alt="Logo-Proyecto" class="Logo-Proyecto">
+            <div class="dividor"></div>
+            <img src="/zimg/UPGOP-logo.png" alt="Logo-UPGOP" class="Logo-UPGOP">
+            <div class="dividor"></div>
+            <span class="Titulo-Proyecto">Sistema de evaluación académico.</span>
+            <span class="Seccion">Alumnos</span>
+        </div>
+        <button class="btn-logout">Salir</button>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="Menu-Proyecto">
+        
+        <!-- Bloque izquierdo: Cuadro contenedor del QR -->
+        <div class="QR">
+            <div id="qrcode"></div>
+        </div>
+
+        <div class="Descargar">
+            <button class="btn-descarga">Descargar</button>
+        </div>
+
+        <div class="Volver">
+            <button class="btn-volver">Volver</button>
+        </div>
+
+    </main>
+
+    <footer class="Footer">
+        <p class="Footer-Copyright"> © 2026 OmegaDevelopment. Todos los derechos reservados.</p>
+        <img src="/zimg/OmegaLogo-completo.jpg" alt="Logo-Empresa" class="Logo-Empresa">
+    </footer>
+
+    <!-- Librería externa para generación de códigos QR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script type="module" src="../js/2-codigoQr.js"></script>
+
+</body>
+</html>

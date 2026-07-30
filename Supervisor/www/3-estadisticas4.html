@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas de Votación</title>
+    <link rel="stylesheet" href="../style/3-estadisticas.css">
+</head>
+<body>
+
+    <header class="header-sistema">
+        <div class="header-logos">
+            <img src="/zimg/TID-logo.png" alt="Logo TID" class="logo-header-tid">
+            <img src="/zimg/UPGOP-logo.png" alt="Logo UPGOP" class="logo-header-upgop">
+        </div>
+
+        <h1 class="header-titulo">
+            Sistema de evaluación académico.
+        </h1>
+
+        <div class="header-usuario">
+            <span class="usuario-rol">Supervisor</span>
+            <button class="btn-salir" id="btnSalir">Salir</button>
+        </div>
+    </header>
+
+    <main class="contenedor-principal">
+
+        <div class="layout-estadisticas">
+
+            <div class="cabecera-estadisticas">
+
+                <div
+                    class="tarjeta-evento-titulo"
+                    id="tituloEvento">
+
+                    Nombre del Evento
+
+                </div>
+
+            </div>
+
+            <!-- AQUÍ SE CARGARÁN LOS PROYECTOS -->
+            <div
+                class="tabla-votos-layout"
+                id="listaProyectos">
+
+            </div>
+
+            <div class="contenedor-volver-derecha">
+
+                <button
+                    class="btn-volver"
+                    id="btnVolver">
+
+                    Volver
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer-sistema">
+
+        <span>2026 UPGOP</span>
+
+        <span>©Omega.2026</span>
+
+    </footer>
+
+    <script type="module" src="../js/3-estadisticas.js"></script>
+
+</body>
+</html>

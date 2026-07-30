@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Evaluación Académico</title>
+    
+    <link rel="stylesheet" href="../style/1-Evento.css">
+</head>
+<body>
+
+    
+    <header>
+        <div class="header-left">
+            <span class="title">Sistema de evaluación académico.</span>
+        </div>
+        <div class="header-right">
+            <span>superusuario</span>
+            <button class="btn-salir" id="btnSalir">Salir</button>
+        </div>
+    </header>
+
+    
+    <div class="action-bar">
+        <button class="btn-action" id="btnCrear">Crear</button>
+        <button class="btn-action" id="btnEliminar">Eliminar</button>
+    </div>
+
+    
+    <main class="main-content">
+        <div class="events-container" id="eventsContainer">
+            
+            
+        </div>
+    </main>
+
+    
+    <footer>
+        <span>2026 UPGOP</span>
+        <span>©Omega.2026</span>
+    </footer>
+
+    
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <h3>Nuevo Evento</h3>
+            <input type="text" id="eventNameInput" placeholder="Nombre del evento" autocomplete="off">
+            <div class="modal-buttons">
+                <button class="btn-modal btn-cancel" id="btnCancelar">Cancelar</button>
+                <button class="btn-modal btn-confirm" id="btnGuardar">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    
+<script type="module" src="../js/1-Evento.js"></script>
+</body>
+</html>

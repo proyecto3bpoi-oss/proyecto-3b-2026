@@ -1,0 +1,182 @@
+/* RESETEO BÁSICO: Elimina márgenes por defecto y usa una fuente limpia */
+* {
+    margin: 0;                             /* Elimina el espacio externo predeterminado de todos los elementos */
+    padding: 0;                            /* Elimina el espacio interno predeterminado de todos los elementos */
+    box-sizing: border-box;                /* Hace que el tamaño total incluya el padding y el borde para evitar desajustes */
+    font-family: Arial, sans-serif;        /* Define la tipografía principal y una de respaldo (sin serifa) */
+}
+
+body {
+    background: linear-gradient(180deg, #00C2FF 20%, #004e92 100%); /* Crea un fondo con degradado vertical de azul claro a oscuro */
+    min-height: 100vh;                     /* Asegura que el cuerpo ocupe como mínimo el 100% de la altura de la pantalla */
+    display: flex;                         /* Activa el modelo de caja flexible (Flexbox) para organizar sus elementos hijos */
+    flex-direction: column;                /* Organiza los elementos hijos en una columna vertical */
+}
+
+.Encabezado {
+    background-color: #04527A;             /* Define el color de fondo azul oscuro del contenedor */
+    color: white;                          /* Cambia el color del texto a blanco */
+    display: flex;                         /* Activa Flexbox para alinear el contenido interno */
+    justify-content: space-between;        /* Distribuye los elementos empujándolos a los extremos (izq y der) */
+    align-items: center;                   /* Centra verticalmente todos los elementos internos */
+    padding: 20px 40px;                    /* Añade 40px de espacio interno arriba/abajo y a los lados */
+}
+
+.Encabezado-Titulos {
+    display: flex;                         /* Activa Flexbox para colocar sus elementos en línea horizontal */
+    align-items: center;                   /* Centra verticalmente los elementos internos */
+    gap: 20px;                             /* Crea una separación automática de 20px entre cada elemento hijo */
+}
+
+.Logo-Proyecto {
+    width: 150px;                          /* Define un ancho fijo de 150 píxeles para el logo del proyecto */
+    height: auto;                          /* Mantiene la proporción original de la imagen */
+}
+
+.Logo-UPGOP {
+    width: 150px;                          /* Define un ancho fijo de 150 píxeles para el logo de la universidad */
+    height: auto;                          /* Mantiene la proporción original de la imagen */
+}
+
+/* Línea vertical blanca divisoria */
+.dividor {
+    width: 2px;                            /* Define el grosor de la línea vertical */
+    height: 30px;                          /* Define la altura de la línea vertical */
+    background-color: rgba(255, 255, 255, 0.5); /* Color blanco con 50% de transparencia */
+}
+
+.Titulo-Proyecto {
+    font-size: 40px;                       /* Define un tamaño de letra grande de 40 píxeles */
+}
+
+.Seccion {
+    font-size: 24px;                       /* Define el tamaño de la letra en 24 píxeles */
+    font-weight: bold;                     /* Pone el texto en negrita */
+}
+
+/* Botón Salir */
+.btn-logout {
+    background-color: #FF0000;             /* Color de fondo rojo brillante */
+    color: #FFFFFF;                        /* Color del texto en blanco puro */
+    border: none;                          /* Quita el borde gris que los botones traen por defecto */
+    padding: 8px 20px;                     /* Añade 8px de espacio interno arriba/abajo y 20px a los lados */
+    border-radius: 20px;                   /* Redondea las esquinas del botón para darle forma de cápsula */
+    cursor: pointer;                       /* Cambia el cursor a una "manita" al pasar sobre el botón */
+    font-size: 14px;                       /* Define el tamaño de la letra en 14 píxeles */
+}
+
+.btn-logout:hover {
+    background-color: #d93636;             /* Cambia el fondo a azul oscuro cuando el usuario pasa el cursor por encima */
+}
+
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.Menu-Proyecto {
+    display: flex;                         /* Activa Flexbox para organizar las dos columnas (izquierda y derecha) */
+    justify-content: space-between;        /* Separa las columnas hacia los extremos */
+    padding: 70px;                         /* Añade un espacio interno de 70px alrededor de todo el contenedor */
+    gap: 40px;                             /* Deja un espacio libre de 40px entre las columnas */
+    flex-wrap: wrap;                       /* Permite que los elementos bajen a la siguiente línea si no caben en la pantalla */
+}
+
+/* --- SECCIÓN IZQUIERDA (CAMPOS EDITABLES) --- */
+.Columna-izquierda {
+    flex: 6;                               /* Proporción de crecimiento: le permite tomar mucho más espacio que la derecha */
+    display: flex;                         /* Activa Flexbox en vertical para sus elementos internos */
+    flex-direction: column;                /* Coloca los elementos internos uno debajo del otro */
+    gap: 30px;                             /* Separa el título y la descripción por 30px */
+    min-width: 300px;                      /* Establece que como mínimo medirá 300px de ancho antes de encogerse más */
+}
+
+/* Estilos compartidos para el título y descripción editables */
+.Titulo {
+    background-color: #1c2d5a;             /* Color de fondo azul marino oscuro */
+    color: white;                          /* Color de texto blanco */
+    border: none;                          /* Elimina el borde predeterminado del cuadro de texto */
+    border-radius: 20px;                   /* Redondea las esquinas a 20px */
+    padding: 20px;                         /* Añade espacio interno de 20px para que el texto no toque los bordes */
+    font-size: 32px;                       /* Tamaño de fuente grande de 32 píxeles */
+    width: 100%;                           /* Ocupa el 100% del ancho de su contenedor */
+    height: 80px;                          /* Define una altura fija de 80 píxeles */
+    resize: none;                          /* Desactiva el tirador que permite al usuario estirar la caja con el ratón */
+    outline: none;                         /* Quita el contorno brillante que aparece automáticamente al hacer clic dentro */
+}
+
+.Descripcion {
+    background-color: #1c2d5a;             /* Color de fondo azul marino oscuro */
+    color: white;                          /* Color de texto blanco */
+    border: none;                          /* Elimina el borde predeterminado */
+    border-radius: 20px;                   /* Redondea las esquinas a 20px */
+    padding: 20px;                         /* Añade espacio interno de 20px */
+    font-size: 18px;                       /* Tamaño de fuente mediano de 18 píxeles */
+    width: 100%;                           /* Ocupa el 100% del ancho de su contenedor */
+    height: 300px;                         /* Define una altura fija alta de 300 píxeles */
+    resize: none;                          /* Desactiva el cambio de tamaño por parte del usuario */
+    outline: none;                         /* Quita el contorno brillante al hacer clic */
+}
+
+/* --- SECCIÓN DERECHA (BOTONES DE ACCIÓN) --- */
+.Columna-derecha {
+    flex: 1;                               /* Proporción de crecimiento baja: toma solo el espacio necesario */
+    display: flex;                         /* Activa Flexbox en vertical para los botones */
+    flex-direction: column;                /* Coloca los botones uno debajo del otro */
+    gap: 30px;                             /* Separa los botones entre sí por 30px */
+    min-width: 250px;                      /* Define un ancho mínimo de 250px para que no se deformen en pantallas chicas */
+}
+
+.btn-evaluar {
+    background-color: #1c2d5a;             /* Color de fondo azul marino oscuro */
+    color: white;                          /* Color de texto blanco */
+    border: none;                          /* Quita los bordes por defecto */
+    border-radius: 20px;                   /* Redondea las esquinas a 20px */
+    padding: 49px;                         /* Añade un relleno grande de 49px en todos los lados */
+    font-size: 18px;                       /* Tamaño de letra de 18 píxeles */
+    height: 120px;                         /* Define una altura fija de 120 píxeles para el botón */
+    text-align: center;                    /* Centra el texto de manera horizontal dentro del botón */
+    cursor: pointer;                       /* Cambia el cursor a "manita" indicando que es clickeable */
+    transition: background-color 0.2s;     /* Suaviza el cambio de color de fondo durante 0.2 segundos al pasar el mouse */
+    text-decoration: none;                 /* Quita el subrayado si este botón es en realidad una etiqueta de enlace <a> */
+}
+
+.btn-qr {
+    background-color: #1c2d5a;             /* Color de fondo azul marino oscuro */
+    color: white;                          /* Color de texto blanco */
+    border: none;                          /* Quita los bordes por defecto */
+    border-radius: 20px;                   /* Redondea las esquinas a 20px */
+    padding: 49px;                         /* Añade un relleno grande de 49px en todos los lados */
+    font-size: 18px;                       /* Tamaño de letra de 18 píxeles */
+    height: 120px;                         /* Define una altura fija de 120 píxeles para el botón */
+    text-align: center;                    /* Centra el texto de manera horizontal dentro del botón */
+    cursor: pointer;                       /* Cambia el cursor a "manita" indicando que es clickeable */
+    transition: background-color 0.2s;     /* Suaviza el cambio de color de fondo durante 0.2 segundos al pasar el mouse */
+    text-decoration: none;                 /* Quita el subrayado si este botón es en realidad una etiqueta de enlace <a> */
+}
+
+/* Efecto visual cuando pasas el mouse por encima */
+.btn-evaluar:hover {
+    background-color: #273b75;             /* Cambia a un azul un poco más claro al pasar el cursor */
+}
+
+.btn-qr:hover {
+    background-color: #273b75;             /* Cambia a un azul un poco más claro al pasar el cursor */
+}
+
+.Footer {
+    background-color: #0D1B2A;             /* Color de fondo azul oscuro */
+    color: white;                          /* Color de texto blanco */
+    display: flex;                         /* Activa Flexbox para organizar el contenido del pie de página */
+    align-items: center;                   /* Centra verticalmente los elementos internos */
+    text-align: center;                    /* Centra el texto horizontalmente */
+    justify-content: space-between;        /* Distribuye los elementos empujándolos a los extremos (izq y der) */
+    padding: 20px;                         /* Añade un relleno de 20px alrededor del contenido */
+    font-size: 28px;                       /* Tamaño de letra pequeño de 28 píxeles */
+    position: absolute;                        /* Fija el pie de página en la parte inferior de la ventana */
+    width: 100%;                           /* Asegura que el pie de página ocupe todo el ancho de la ventana */
+    bottom: 0;                              /* Asegura que el pie de página esté pegado al fondo de la ventana */
+}
+
+.Logo-Empresa {
+    width: 150px;                          /* Define un ancho fijo de 100 píxeles para el logo de la empresa */
+    height: auto;                          /* Mantiene la proporción original de la imagen */
+    border-radius: 25px;                   /* Redondea ligeramente las esquinas del logo de la empresa */
+}

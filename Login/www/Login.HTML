@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Evaluación Académico</title>
+
+    <link rel="stylesheet" href="../style/Login.CSS">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            <img class="logo" src="../../zimg/TID-logo.png" alt="TID LOGO">
+        </div>
+
+        <div class="separador"></div>
+
+        <div class="logo">
+            <img class="logo" src="../../zimg/UPGOP-logo.png" alt="UPGOP LOGO">
+        </div>
+
+        <div class="separador"></div>
+
+        <div class="tituloHeader">
+            Sistema de evaluación académico.
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONTENIDO ================= -->
+
+    <main>
+
+        <h1>
+            Bienvenido a nuestro sistema<br>
+            de votación y evaluación.
+        </h1>
+
+
+        <div class="contenedorBotones">
+
+            <button id="btnSupervisor">
+                Supervisor
+            </button>
+
+            <button id="btnMaestro">
+                Maestro
+            </button>
+
+            <button id="btnAlumno">
+                Alumno
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+            2026 UPGOP
+        </div>
+
+        <div>
+            ©Omega.2026
+        </div>
+
+        <div class="logoFooter">
+            <img class="logoFooter" src="../../zimg/OmegaLogo-reducido.png" alt="Logo Omega">
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= DIALOG SUPERVISOR ================= -->
+
+    <dialog id="dialogSupervisor">
+
+        <h2>Inicio de sesión - Supervisor</h2>
+
+        <label>Correo electrónico</label>
+
+        <input
+            type="email"
+            id="correoSupervisor"
+            placeholder="Correo electrónico"
+        >
+
+        <label>Contraseña</label>
+
+        <input
+            type="password"
+            id="passwordSupervisor"
+            placeholder="Contraseña"
+        >
+
+        <div class="dialogBotones">
+
+            <button id="cancelarSupervisor">
+                Cancelar
+            </button>
+
+            <button id="entrarSupervisor">
+                Ingresar
+            </button>
+
+        </div>
+
+    </dialog>
+
+
+
+    <!-- ================= DIALOG MAESTRO ================= -->
+
+    <dialog id="dialogMaestro">
+
+        <h2>Ingreso Maestro</h2>
+
+        <label>Correo electrónico</label>
+
+        <input
+            type="email"
+            id="correoMaestro"
+            placeholder="Correo electrónico"
+        >
+
+        <div class="dialogBotones">
+
+            <button id="cancelarMaestro">
+                Cancelar
+            </button>
+
+            <button id="entrarMaestro">
+                Continuar
+            </button>
+
+        </div>
+
+    </dialog>
+
+
+
+    <!-- ================= DIALOG ALUMNO ================= -->
+
+    <dialog id="dialogAlumno">
+
+        <h2>Ingreso Alumno</h2>
+
+        <label>Correo electrónico</label>
+
+        <input
+            type="email"
+            id="correoAlumno"
+            placeholder="Correo electrónico"
+        >
+
+        <div class="dialogBotones">
+
+            <button id="cancelarAlumno">
+                Cancelar
+            </button>
+
+            <button id="entrarAlumno">
+                Continuar
+            </button>
+
+        </div>
+
+    </dialog>
+
+
+
+    <script type="module" src="../js/Login.JS"></script>
+
+</body>
+</html>

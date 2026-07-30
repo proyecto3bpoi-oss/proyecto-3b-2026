@@ -1,0 +1,575 @@
+/* =========================================================
+   RESETEO GENERAL
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================================================
+   CUERPO DE LA PÁGINA
+========================================================= */
+
+body {
+    background: linear-gradient(180deg, #00C2FF 20%, #004e92 100%);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================================
+   ENCABEZADO
+========================================================= */
+
+.Encabezado {
+    background-color: #04527A;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+
+    width: 100%;
+}
+
+.Encabezado-Titulos {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    min-width: 0;
+}
+
+.Logo-Proyecto {
+    width: 150px;
+    max-width: 20vw;
+    height: auto;
+}
+
+.Logo-UPGOP {
+    width: 150px;
+    max-width: 20vw;
+    height: auto;
+}
+
+.dividor {
+    width: 2px;
+    height: 30px;
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    flex-shrink: 0;
+}
+
+.Titulo-Proyecto {
+    font-size: clamp(18px, 2.5vw, 40px);
+    white-space: nowrap;
+}
+
+
+.btn-logout {
+    background-color: #f00;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 20px;
+
+    padding: 8px 20px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.btn-logout:hover {
+    background-color: #d93636;
+}
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+
+.Menu-Proyecto {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 30px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex: 1;
+}
+
+/* =========================================================
+   CONTENEDOR DE EVALUACIÓN
+========================================================= */
+
+.Contenedor-Evaluacion {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================================================
+   TÍTULO DE LA EVALUACIÓN
+========================================================= */
+
+.Titulo-Evaluacion {
+    width: 100%;
+
+    text-align: center;
+
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+.Titulo-Evaluacion h1 {
+    font-size: clamp(24px, 4vw, 36px);
+
+    margin-bottom: 10px;
+}
+
+.Titulo-Evaluacion p {
+    font-size: clamp(14px, 2vw, 18px);
+}
+
+/* =========================================================
+   INDICADOR DE CALIFICACIÓN
+========================================================= */
+
+.Indicador-Calificacion {
+    background-color: #1c2d5a;
+
+    color: white;
+
+    padding: 10px 30px;
+
+    border-radius: 15px;
+
+    font-size: clamp(14px, 2vw, 18px);
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    max-width: 100%;
+}
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+.Evaluacion-Circulos {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+/* =========================================================
+   FILAS DE PREGUNTAS
+========================================================= */
+
+.form-row {
+    width: 100%;
+
+    background-color: #1c2d5a;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+/* =========================================================
+   TEXTO DE LA PREGUNTA
+========================================================= */
+
+.Texto-Pregunta {
+    color: white;
+
+    font-size: clamp(15px, 1.8vw, 19px);
+
+    line-height: 1.4;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+/* =========================================================
+   CONTENEDOR DE OPCIONES 1-5
+========================================================= */
+
+.radio-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(10px, 2vw, 25px);
+
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   OPCIONES DE RADIO
+========================================================= */
+
+.radio-label {
+    color: white;
+
+    font-size: clamp(14px, 1.8vw, 18px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+/* =========================================================
+   CÍRCULOS DE SELECCIÓN
+========================================================= */
+
+.radio-label input[type="radio"] {
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+}
+
+/* =========================================================
+   COMENTARIO Y BOTONES
+========================================================= */
+
+.bottom-section {
+    width: 100%;
+
+    margin-top: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+/* =========================================================
+   ÁREA DE COMENTARIOS
+========================================================= */
+
+.textarea-comment {
+    width: 100%;
+
+    min-height: 150px;
+
+    background-color: #1c2d5a;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    font-size: 18px;
+
+    resize: vertical;
+
+    outline: none;
+}
+
+.textarea-comment::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================================================
+   CONTENEDOR DE BOTONES
+========================================================= */
+
+.Botones-Evaluacion {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+/* =========================================================
+   BOTÓN VOLVER
+========================================================= */
+
+.btn-volver {
+    background-color: #FFDD00;
+
+    color: #000000;
+
+    text-decoration: none;
+
+    border-radius: 15px;
+
+    width: 150px;
+
+    min-height: 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+.btn-volver:hover {
+    background-color: #ffe74b;
+}
+
+/* =========================================================
+   BOTÓN ENVIAR EVALUACIÓN
+========================================================= */
+
+.btn-enviar {
+    background-color: #00c853;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 15px;
+
+    padding: 12px 25px;
+
+    min-height: 40px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #00a844;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.Footer {
+    background-color: #0D1B2A;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    width: 100%;
+
+    margin-top: auto;
+}
+
+.Footer-Copyright {
+    font-size: clamp(12px, 1.5vw, 18px);
+
+    text-align: center;
+}
+
+.Logo-Empresa {
+    width: 150px;
+
+    max-width: 25vw;
+
+    height: auto;
+
+    border-radius: 25px;
+}
+
+/* =========================================================
+   PANTALLAS MEDIANAS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .Encabezado {
+        padding: 15px 20px;
+    }
+
+    .Encabezado-Titulos {
+        gap: 12px;
+    }
+
+    .Logo-Proyecto,
+    .Logo-UPGOP {
+        width: 110px;
+    }
+
+    .form-row {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+    }
+
+    .radio-container {
+        width: 100%;
+
+        justify-content: space-around;
+    }
+
+}
+
+/* =========================================================
+   PANTALLAS PEQUEÑAS / CELULARES
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .Encabezado {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    .Encabezado-Titulos {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .Logo-Proyecto,
+    .Logo-UPGOP {
+        width: 80px;
+
+        max-width: 30vw;
+    }
+
+    .dividor {
+        height: 25px;
+    }
+
+    .Titulo-Proyecto {
+        width: 100%;
+
+        text-align: center;
+
+        white-space: normal;
+
+        font-size: 20px;
+    }
+
+    .btn-logout {
+        width: 100%;
+
+        max-width: 150px;
+    }
+
+    .Menu-Proyecto {
+        padding: 20px 15px;
+    }
+
+    .Indicador-Calificacion {
+        width: 100%;
+
+        padding: 10px 15px;
+    }
+
+    .form-row {
+        padding: 15px;
+
+        gap: 15px;
+    }
+
+    .Texto-Pregunta {
+        font-size: 16px;
+    }
+
+    .radio-container {
+        gap: 10px;
+    }
+
+    .radio-label {
+        font-size: 14px;
+    }
+
+    .radio-label input[type="radio"] {
+        width: 18px;
+        height: 18px;
+    }
+
+    .textarea-comment {
+        min-height: 120px;
+
+        font-size: 16px;
+    }
+
+    .Botones-Evaluacion {
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+    }
+
+    .btn-volver,
+    .btn-enviar {
+        width: 100%;
+    }
+
+    .Footer {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .Logo-Empresa {
+        width: 120px;
+
+        max-width: 50vw;
+    }
+}

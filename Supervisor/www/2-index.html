@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Evaluación Académico - Detalle Evento</title>
+    
+    <link rel="stylesheet" href="../style/2-estilos.css">
+    
+    <script type="module" src="../js/2-script2.js" defer></script>
+</head>
+<body>
+
+    
+    <header>
+        <div class="header-left">
+            <span class="title">Sistema de evaluación académico.</span>
+        </div>
+        <div class="header-right">
+            <span>superusuario</span>
+            <button class="btn-salir" id="btnSalir">Salir</button>
+        </div>
+    </header>
+
+    
+    <div class="dashboard-container">
+        
+        
+        <div class="column-left">
+            <div class="event-title-badge">
+               Nombre del evento
+            </div>
+
+            
+            <main class="teachers-list-container">
+                <div class="teachers-scrollbar" id="teachersContainer">
+                
+                    <div class="teacher-card">Maestro 1</div>
+                </div>
+            </main>
+
+            <button class="btn-back">Volver</button>
+        </div>
+
+    
+        <div class="column-right">
+            <button class="btn-assign" id="btnAsignar">Asignar docente</button>
+            
+            <div class="menu-buttons-group">
+               
+               
+                <button class="btn-menu" id="btnProyectos">Proyectos</button>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <footer>
+        <span>2026 UPGOP</span>
+        <span>©Omega.2026</span>
+    </footer>
+
+    
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <h3>Asignar Docente</h3>
+            <input type="text" id="teacherNameInput" placeholder="Nombre del maestro" autocomplete="off">
+            <input type="email" id="teacherEmailInput" placeholder="Correo electrónico del maestro" autocomplete="off">
+            <div class="modal-buttons">
+                <button class="btn-modal btn-cancel" id="btnCancelar">Cancelar</button>
+                <button class="btn-modal btn-confirm" id="btnGuardar">Asignar</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

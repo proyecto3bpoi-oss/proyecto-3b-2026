@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Maestro</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="../style/1-dashboard-lleno.css">
+</head>
+
+<body>
+
+    <header class="header-sistema">
+
+        <div class="header-logos">
+            <img src="/zimg/TID-logo.png" alt="Logo TID" class="logo-header-tid">
+            <img src="/zimg/UPGOP-logo.png" alt="Logo UPGOP" class="logo-header-upgop">
+        </div>
+
+        <h1 class="header-titulo">
+            Sistema de evaluación académico.
+        </h1>
+
+        <div class="header-usuario">
+            <span class="usuario-rol">Maestro</span>
+
+            <button
+                id="btnSalir"
+                class="btn-salir">
+                Salir
+            </button>
+        </div>
+
+    </header>
+
+    <main class="contenedor-principal">
+
+        <div class="layout-dashboard">
+
+            <!-- Lista de proyectos -->
+            <div
+                id="listaProyectos"
+                class="columna-izquierda scrollback-container">
+
+                <!-- Las tarjetas se crean desde JavaScript -->
+
+            </div>
+
+            <!-- Menú derecho -->
+            <div class="columna-derecha">
+
+                <div class="acciones-superiores">
+
+                    <button
+                        id="btnNuevoProyecto"
+                        class="btn-oscuro">
+                        Crear
+                    </button>
+
+                    <button
+                        id="btnEliminar"
+                        class="btn-oscuro">
+                        Editar
+                    </button>
+
+                </div>
+
+                <div class="menu-central">
+
+                    <button
+                        id="btnAsignarAlumnos"
+                        class="btn-menu-grande">
+                        Asignar alumnos
+                    </button>
+
+                    <button
+                        id="btnEstadisticas"
+                        class="btn-menu-grande">
+                        Estadísticas
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ========================= -->
+    <!-- Modal Nuevo Proyecto -->
+    <!-- ========================= -->
+
+    <dialog id="modalNuevoProyecto">
+
+        <div class="modal-diseno-gris">
+
+            <div class="modal-bloque-superior-oscuro"></div>
+
+            <div class="modal-cuerpo-formulario">
+
+                <input
+                    id="nombreProyecto"
+                    type="text"
+                    class="input-gris-formulario"
+                    placeholder="Escribe aquí...">
+
+                <span class="modal-etiqueta-inferior">
+                    Nombre del Proyecto
+                </span>
+
+            </div>
+
+            <button
+                id="btnGuardarProyecto"
+                class="btn-oscuro btn-modal-guardar">
+
+                Guardar Proyecto
+
+            </button>
+
+            <button
+                id="btnCancelar"
+                class="btn-oscuro">
+
+                Cancelar
+
+            </button>
+
+        </div>
+
+    </dialog>
+
+
+
+    <dialog id="modalEditarProyecto">
+
+        <h2>Editar proyecto</h2>
+
+        <label for="txtNombreProyecto">
+            Nombre del proyecto
+        </label>
+
+
+    <div class="modal-diseno-gris">
+
+        <div class="modal-cuerpo-formulario">
+
+            <select
+                id="selectProyectoEditar"
+                class="input-gris-formulario">
+            </select>
+
+            <span class="modal-etiqueta-inferior">
+                Proyecto
+            </span>
+
+        </div>
+
+        <div class="modal-cuerpo-formulario">
+
+            <input
+                id="txtNombreProyecto"
+                type="text"
+                class="input-gris-formulario"
+                placeholder="Nuevo nombre">
+
+            <span class="modal-etiqueta-inferior">
+                Nuevo nombre
+            </span>
+
+        </div>
+
+        <button
+            id="btnGuardarEditar"
+            class="btn-oscuro btn-modal-guardar">
+
+            Guardar
+
+        </button>
+
+        <button
+            id="btnCancelarEditar"
+            class="btn-oscuro">
+
+            Cancelar
+
+        </button>
+
+        </div>
+
+    </dialog>
+
+    <!-- ========================= -->
+    <!-- Modal Asignar Alumnos -->
+    <!-- ========================= -->
+
+    <dialog id="modalAsignarAlumno">
+
+        <div class="modal-diseno-gris">
+
+            <div class="modal-cuerpo-formulario columnas-dos">
+
+                <div class="grupo-falso-input">
+
+                    <input
+                        id="correoAlumno"
+                        type="email"
+                        class="input-gris-formulario"
+                        placeholder="correo@ejemplo.com">
+
+                    <span class="modal-etiqueta-inferior">
+
+                        Correo del alumno
+
+                    </span>
+
+                </div>
+
+                <div class="grupo-falso-input">
+
+                    <select
+                        id="proyectoAlumno"
+                        class="input-gris-formulario">
+
+                    </select>
+
+                    <span class="modal-etiqueta-inferior">
+
+                        Nombre del proyecto
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="modal-indicador-texto">
+
+                Nombre del proyecto debe ser predefinido
+
+            </div>
+
+            <button
+                id="btnAsignarAlumno"
+                class="btn-oscuro btn-modal-guardar">
+
+                Asignar Alumno
+
+            </button>
+
+            <button
+                id="btnCancelarAsignacion"
+                class="btn-oscuro">
+
+                Cancelar
+
+            </button>
+
+        </div>
+
+    </dialog>
+
+    <footer class="footer-sistema">
+
+        <span class="footer-institucion">
+
+            2026 UPGOP
+
+        </span>
+
+        <div class="footer-creditos">
+
+            <span class="footer-copyright">
+
+                ©Omega.2026
+
+            </span>
+
+            <div class="badge-omega-logo">
+
+                OMEGA DEVELOPMENT
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script
+        type="module"
+        src="../js/1-dashboard-lleno.js">
+    </script>
+
+</body>
+
+</html>

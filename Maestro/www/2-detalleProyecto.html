@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Proyecto</title>
+    <link rel="stylesheet" href="../style/2-detalleProyecto.css">
+</head>
+<body>
+
+    <header class="header-sistema">
+    <div class="header-logos">
+        <img src="/zimg/TID-logo.png" alt="Logo TID" class="logo-header-tid">
+        <img src="/zimg/UPGOP-logo.png" alt="Logo UPGOP" class="logo-header-upgop">
+    </div>
+
+<h1 class="header-titulo">
+    Sistema de evaluación académico.
+</h1>
+
+<div class="header-usuario">
+    <span class="usuario-rol">Maestro</span>
+    <button class="btn-salir" id="btn-salir">Salir</button>
+</div>
+
+</header>
+
+<main class="contenedor-principal">
+
+<div class="layout-detalle">
+
+    <div class="detalle-principal">
+
+        <!-- Título del proyecto -->
+        <div class="tarjeta-proyecto ancho-fijo" id="tituloProyecto">
+            Proyecto
+        </div>
+
+
+        <!-- Descripción del proyecto -->
+        <div class="bloques-paralelos">
+
+            <div class="bloque-info" id="descripcionProyecto">
+                Descripcion
+            </div>
+
+        </div>
+
+
+        <!-- Botón para regresar al dashboard -->
+        <button
+            class="btn-volver" id="btn-volver">
+            Volver
+        </button>
+
+        </div>
+
+
+    <!-- Sección de alumnos -->
+    <aside class="panel-alumnos-section5">
+
+        <div class="lista-alumnos-scroll">
+
+            <div
+                class="lista-alumnos-pills"
+                id="listaAlumnos">
+
+                <!--
+                    Los alumnos pertenecientes al proyecto
+                    serán agregados aquí mediante JavaScript.
+                -->
+
+            </div>
+
+        </div>
+
+    </aside>
+
+</div>
+
+</main>
+
+<footer class="footer-sistema">
+
+<span class="footer-institucion">
+    2026 UPGOP
+</span>
+
+<div class="footer-creditos">
+
+    <span class="footer-copyright">
+        ©Omega.2026
+    </span>
+
+    <div class="badge-omega-logo">
+        OMEGA DEVELOPMENT
+    </div>
+
+</div>
+
+</footer>
+
+<script type="module" src="../js/2-detalleProyecto.js"></script>
+
+</body>
+</html>

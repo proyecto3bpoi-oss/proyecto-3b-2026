@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    height: 120px;
+    background-color: #777777;
+
+    display: flex;
+    align-items: center;
+
+    border-top: 15px solid black;
+}
+
+.logo{
+    width: 190px;
+    height: 80px;
+
+    margin-left: 20px;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #444;
+    font-size: 22px;
+    text-align: center;
+}
+
+.separador{
+    width: 2px;
+    height: 90px;
+    background-color: white;
+    margin: 0 15px;
+}
+
+.tituloHeader{
+    color: white;
+    font-size: 22px;
+}
+
+
+/* ================= CONTENIDO ================= */
+
+main{
+    flex: 1;
+
+    background: linear-gradient(
+        to bottom,
+        #95b2e8,
+        #5574b2
+    );
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    margin-top: 90px;
+
+    text-align: center;
+
+    font-size: 4rem;
+    font-weight: normal;
+
+    color: black;
+}
+
+.contenedorBotones{
+    margin-top: 70px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contenedorBotones button{
+    width: 350px;
+    height: 90px;
+
+    border: none;
+    border-radius: 20px;
+
+    background-color: #243564;
+
+    color: white;
+    font-size: 28px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contenedorBotones button:hover{
+    transform: scale(1.03);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    height: 100px;
+
+    background-color: #041227;
+
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    font-size: 20px;
+}
+
+.logoFooter{
+    width: 140px;
+    height: 70px;
+
+    background-color: white;
+
+    color: #444;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ================= DIALOGS ================= */
+
+dialog{
+    width: 420px;
+
+    padding: 30px;
+
+    border: none;
+    border-radius: 15px;
+
+    margin: auto;
+}
+
+dialog::backdrop{
+    background-color: rgba(0,0,0,0.4);
+}
+
+dialog h2{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+dialog label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+dialog input{
+    width: 100%;
+    height: 45px;
+
+    padding-left: 10px;
+
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+}
+
+.dialogBotones{
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.dialogBotones button{
+    width: 150px;
+    height: 45px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.dialogBotones button:last-child{
+    background-color: #243564;
+    color: white;
+}
